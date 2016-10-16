@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="App">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <img alt="Brand" src="logo.png">
+          </a>
+          <p>Bessemer Trust Supplier Self-Service Portal</p>
+        </div>
+      </div>
+    </nav>
+    <div class="container" ng-controller="HomeController">
+      
+      <h1>Supplier</h1>
+      <br/>
+      <form class="form-horizontal">
+        <div class="form-group">
+          <label for="FirstLineName" class="col-sm-2 control-label">Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Supplier Inc 51" ng-model='supplier.FirstLineName'>
+          </div>
+        </div>
+        <h2>Main Address</h2>
+        <div class="form-group">
+          <label for="FirstLineName" class="col-sm-2 control-label">Street Number</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="1000" ng-model='supplier.address.HouseID'>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="FirstLineName" class="col-sm-2 control-label">Street Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Main Street" ng-model='supplier.address.StreetName'>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="FirstLineName" class="col-sm-2 control-label">City</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Alpharetta" ng-model='supplier.address.CityName'>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="FirstLineName" class="col-sm-2 control-label">State</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="GA" ng-model='supplier.address.RegionCode'>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="FirstLineName" class="col-sm-2 control-label">Postal code</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="30022" ng-model='supplier.address.StreetPostalCode'>
+          </div>
+        </div>
+        <h2>Contact Person</h2>
+        <div class="form-group">
+          <label for="FirstLineName" class="  col-sm-2 control-label">First Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="John" ng-model='supplier.contactPerson.GivenName'>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="FirstLineName" class="col-sm-2 control-label">Last Name</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Doe" ng-model='supplier.contactPerson.FamilyName'>
+          </div>
+        </div>
+        <h2>Purchasing Data</h2>
+        <div class="form-group">
+          <label for="FirstLineName" class="col-sm-2 control-label">Terms of Payment</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <h2>Tax information</h2>
+        <div class="form-group">
+          <label for="FirstLineName" class="col-sm-2 control-label">Employer ID number</label> 
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="12-3456789" ng-model='supplier.taxInfo.PartyTaxID'>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="FirstLineName" class="col-sm-2 control-label">Withholding Tax Classification</label> 
+          <div class="col-sm-10">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="FirstLineName" class="col-sm-2 control-label">Tax rate type</label> 
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="1">
+          </div>
+        </div>
+        <h2>Payment Details</h2>
+        <div class="form-group">
+          <label for="FirstLineName" class="col-sm-2 control-label">Bank name</label> 
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Bank of America">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="FirstLineName" class="col-sm-2 control-label">ABA Routing Number</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="FirstLineName" class="col-sm-2 control-label">Bank account number</label> 
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="12345678" ng-model='supplier.bankDetails.BankAccountID'>
+          </div>
+        </div>
+        <h2>Folder attachments</h2>
+        <div class="form-group">
+          <label for="FirstLineName" class="col-sm-2 control-label">Attachment type</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="pdf">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="FirstLineName" class="col-sm-2 control-label">File</label>
+          <div class="col-sm-10">
+            <input type="file">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-default" ng-click='sendForm(supplier)'>Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    
+    <!-- App scripts -->
+    <script src="main.js"></script>
+    <!-- END: App scripts -->
+  </body>
+</html>
