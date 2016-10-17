@@ -96,8 +96,18 @@ module.exports.createSupplier = function (req, res, next) {
     },
     ObjectNodeSenderTechnicalID: '03',
     CountryCode: 'US',
-    TaxTypeCode: '2',
-    TaxRateTypeCode: '1'
+    TaxTypeCode: {
+      attributes: {
+        listID: ''
+      },
+      $value: '2'
+    },
+    TaxRateTypeCode: {
+      attributes: {
+        listID: ''
+      },
+      $value: '1'
+    }
   };
   
   suppliers[0].AttachmentFolder = {
@@ -119,7 +129,9 @@ module.exports.createSupplier = function (req, res, next) {
   };
   
   delete suppliers[0].AttachmentFolder;
-  delete suppliers[0].WithholdingTaxClassification;
+  //delete suppliers[0].WithholdingTaxClassification;
+  
+  
   delete suppliers[0].address;
   delete suppliers[0].contactPerson;
   delete suppliers[0].bankDetails;
